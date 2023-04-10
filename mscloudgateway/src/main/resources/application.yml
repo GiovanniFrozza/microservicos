@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: mscloudgateway
+  ## habilita no cloudGateway o localizador de microsericos e isso em caixa baixa
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+
+server:
+  port: 8080
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    #caminho do eureka
+    service-url:
+      defaultZone: http://localhost:8761/eureka

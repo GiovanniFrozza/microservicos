@@ -1,0 +1,22 @@
+# nome do ms
+spring:
+  application:
+    name: msclientes
+
+# porta 0 porque ele vai subir em uma porta aleatoria, para nao dar interferencia
+# com outras e nao precisar ficar setando elas manualmente
+server:
+  port: 0
+
+
+#  Configuracao do eureka
+
+
+eureka:
+  client:
+    # caminho do servidor eureka que quero me registrar
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  # Gera uma instancia do ms randomico
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
