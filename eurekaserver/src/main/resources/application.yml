@@ -1,0 +1,14 @@
+### Nome da aplicacao
+spring:
+  application:
+    name: eurekeserver
+
+### Porta do eureka
+server:
+  port: 8761
+
+### Como vamos ter varios ms nao � para ele se auto registrar
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
